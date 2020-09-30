@@ -2,9 +2,11 @@
 New Build of WooLaLa mobile app built with Flutter and NodeJS
 
 # GitHub Conventions
-Develop will be our primary working branch and the top branch of develop will be pulled into master after review.
+Develop will be our primary working branch which will be pulled into master after a review.
 Checkout the develop branch and branch off from there.
-Start new feature branches with: ft-featureName
+
+Start new feature branches with: ft-feature-name
+I have added a ft-facebook-login branch already
 
 # Dev Env Startup:
 Windows (Mac will be a little different)

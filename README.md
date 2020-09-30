@@ -41,6 +41,7 @@ NodeJS server established locally for now - make sure NodeJS is installed on you
   To use the mongodb client on app.js run after installing node:
       npm install mongoose
 
+The app.js had the Product_Owner inserted into the request URI already, but feel free to change it or we can all operate off of the same admin account.
 # Admins:
   Product_Owner
   owNONdfwaKARb9kH

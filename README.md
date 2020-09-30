@@ -18,7 +18,9 @@ Download Android Studio (IDE we will be using to develop)
 -Make sure to download the latest AndroidSDK (it will prompt you to do this)
 -There are two ways to test a flutter app
   1. On an android device connected via USB (Turn on Developer options in settings and enable USB debugging)
-  2. (If you have an iPhone) Android device emulator on your computer (Available as a plugin in Andriod Studio that is relatively painless to setup)
+  2. (If you have an iPhone) Android device emulator on your computer (Available as a plugin in Android Studio that is relatively painless to setup)
+
+You will need to install the flutter and dart plugins on android studio ass well.
 
 The steps may be different on mac but the documentation on the flutter website will answer most of your questions. I will upload a base version of the project for us to begin working on and will work on locally for now until AWS is setup.
 
@@ -36,6 +38,8 @@ NodeJS server established locally for now - make sure NodeJS is installed on you
   You need to login to the account and add your IP address to the whitelist under the "Network Access" settings tab so that your computer can access the database.
 
   Limit Data upload because we are using a free tier account with 512MB of space.
+  To use the mongodb client on app.js run after installing node:
+      npm install mongoose
 
 # Admins:
   Product_Owner
@@ -56,3 +60,7 @@ NodeJS server established locally for now - make sure NodeJS is installed on you
 
   Developer_4
   MZhrCA6jE2VY23UM
+
+# flutter note
+
+The pubspec.yaml file apparently has some weird way to keep track of dependencies in terms of installing on local machines. We will probably run into this later, so keep note of when this file is changed.

@@ -17,7 +17,7 @@ Follow instructions on Website
 Download Android Studio (IDE we will be using to develop)
 -Make sure to download the latest AndroidSDK (it will prompt you to do this)
 -There are two ways to test a flutter app
-  1. On an android device connected via USB
+  1. On an android device connected via USB (Turn on Developer options in settings and enable USB debugging)
   2. (If you have an iPhone) Android device emulator on your computer (Available as a plugin in Andriod Studio that is relatively painless to setup)
 
 The steps may be different on mac but the documentation on the flutter website will answer most of your questions. I will upload a base version of the project for us to begin working on and will work on locally for now until AWS is setup.

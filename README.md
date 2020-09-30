@@ -23,3 +23,6 @@ Download Android Studio (IDE we will be using to develop)
 The steps may be different on mac but the documentation on the flutter website will answer most of your questions. I will upload a base version of the project for us to begin working on and will work on locally for now until AWS is setup.
 
 Supposedly this will work on iOS devicesbut I am not sure how we will test it yet. Will need a dev account from Tito ($100 fee), so we will focus on Android for now.
+
+A Good tutorial to follow for understanding how Flutter works:
+https://flutter.dev/docs/get-started/codelab#step-1-create-the-starter-flutter-app

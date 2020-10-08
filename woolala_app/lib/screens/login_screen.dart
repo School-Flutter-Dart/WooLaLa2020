@@ -21,16 +21,23 @@ class LoginScreen extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            //Text("Login", style: TextStyle(color: Colors.red, fontSize: 40),)
-            new Image.asset(
+            Image.asset(
                 './assets/logos/logo_size.jpg',
-              width: 400,
-              height: 100,
+              width: 350,
+              height: 90,
               fit: BoxFit.contain,
               semanticLabel: 'WooLaLa logo'
+            ),
+            Text("Powered by: ", style: TextStyle(color: Colors.white, fontSize: 16),),
+            Image.asset(
+             'assets/logos/fashionNXT_logo.png',
+             width: 150,
+             height: 30,
+             fit: BoxFit.contain,
+             semanticLabel: 'FashioNXT logo'
             )
           ],
-        ),
+       ),
       ),
 
     );

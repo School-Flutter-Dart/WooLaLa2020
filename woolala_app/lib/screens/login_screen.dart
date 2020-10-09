@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'package:google_sign_in/google_sign_in.dart';
+
 
 class LoginScreen extends StatelessWidget {
+  GoogleSignIn googleSignIn = GoogleSignIn(clientId: "566232493002-qqkorq4nvfqu9o8es6relg6fe4mj01mm.apps.googleusercontent.com");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,13 +65,17 @@ class LoginScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           _buildSocialBtn(() => print('Login with Facebook'), AssetImage('assets/logos/facebook_logo.png',),),
-          _buildSocialBtn(() => print('Login with Google'), AssetImage('assets/logos/google_logo.png',),),
+          _buildSocialBtn(startSignIn, AssetImage('assets/logos/google_logo.png',),),
         ],
       ),
     );
   }
 
-
-
-
+  void startSignIn() async {
+    await googleSignIn.signOut();
+    GoogleSignInAccount user = await googleSignIn.signIn();
+    if (user == null) {
+      print("Sign in failed.");
+    }
+  }
 }

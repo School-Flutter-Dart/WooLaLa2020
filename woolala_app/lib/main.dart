@@ -16,7 +16,9 @@ class WooLaLa extends StatelessWidget {
         // This makes the visual density adapt to the platform that you run the app on. For desktop platforms, the controls will be smaller and closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      routes: { // easier use for multiple page navigation
+        '/' : (_) => LoginScreen() //current homepage is just the login screen
+      },
     );
   }
 }

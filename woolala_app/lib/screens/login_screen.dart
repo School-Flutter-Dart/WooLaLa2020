@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:google_sign_in/google_sign_in.dart';
 
+final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
 class LoginScreen extends StatelessWidget {
   GoogleSignIn googleSignIn = GoogleSignIn(clientId: "566232493002-qqkorq4nvfqu9o8es6relg6fe4mj01mm.apps.googleusercontent.com");
@@ -10,6 +11,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       body: Center(
         child: Container(
         padding: EdgeInsets.symmetric(vertical: 50),
@@ -65,17 +67,22 @@ class LoginScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           _buildSocialBtn(() => print('Login with Facebook'), AssetImage('assets/logos/facebook_logo.png',),),
-          _buildSocialBtn(startSignIn, AssetImage('assets/logos/google_logo.png',),),
+          _buildSocialBtn(startGoogleSignIn, AssetImage('assets/logos/google_logo.png',),),
         ],
       ),
     );
   }
 
-  void startSignIn() async {
+  void startGoogleSignIn() async {
     await googleSignIn.signOut();
     GoogleSignInAccount user = await googleSignIn.signIn();
     if (user == null) {
       print("Sign in failed.");
     }
+    else {
+      SnackBar googleSnackBar = SnackBar(content: Text("Welcome ${user.displayName}!"));
+      _scaffoldKey.currentState.showSnackBar(googleSnackBar);
+    }
   }
+
 }
